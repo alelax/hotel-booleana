@@ -1,0 +1,44 @@
+header {
+   width: 100%;
+
+}
+.header-grid-container {
+   display: grid;
+   width: 100%;
+   grid-auto-columns: 30% 70%;
+   grid-template-rows: 100%;
+}
+
+.header-grid-item {
+   /* display: none; */
+}
+
+.left-top-item {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.central-item {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+
+
+/* @media (min-width: 576px) {
+
+} */
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+/* // Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... } */
+
+// Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
