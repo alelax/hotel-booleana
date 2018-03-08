@@ -1,6 +1,7 @@
 
 /* ************************* HEADER ************************* */
-* {
+
+body, header, header * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -8,13 +9,12 @@
 
 header {
    width: 100%;
-   
    padding: 15px;
 }
 
 .header-grid-container {
    display: grid;
-   width: 100%;
+   max-width: 100%;
    grid-template-columns: 70% 30%;
    grid-template-rows: 80% 10% 10%;
 }
@@ -59,22 +59,43 @@ header {
 }
 
 
-
 #logo {
    width: 180px;
 }
 
+/* ************************* ROOM PREVIEW ************************* */
 
+.preview {
+   position: relative;
+}
+
+.preview h2 {
+   position: absolute;
+   top: 5px;
+}
+
+.preview-title-left {
+   left: 25px;
+}
+
+.preview-title-right {
+   right: 25px;
+}
+
+.preview img {
+   width: 100%;
+   height: auto;
+}
 
 
 
 /* ************************* MEDIA-QUERIES ************************* */
 
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
 
    .header-grid-container {
-      width: 80%;
+      max-width: 540px;
       margin: 0 auto;
       grid-template-columns: 20% 60% 20%;
       grid-template-rows: 20% 20% 20% 20% 20%;
@@ -161,11 +182,22 @@ header {
       width: 250px;
    }
 
+   .row {
+      height: 280px;
+   }
+
+   .preview img {
+      height: 100%;
+   }
 
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+   .header-grid-container {
+      max-width: 720px;
+   }
 
 
 }
@@ -177,18 +209,21 @@ header {
    }
 
    .header-grid-container {
-      width: 75%;
+      max-width: 960px;
    }
 
    #logo {
       width: 400px;
    }
 
+
 }
 
- /* // Extra large devices (large desktops, 1200px and up)
+ /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+   .header-grid-container {
+      max-width: 1140px;
+   }
 
-
-} */
+}
