@@ -58,10 +58,10 @@ header {
    grid-row-end: 4;
 }
 
-
 #logo {
    width: 180px;
 }
+
 
 /* ************************* ROOM PREVIEW ************************* */
 
@@ -75,7 +75,7 @@ header {
 }
 
 .preview-title-left {
-   left: 25px;
+   left: 3%;
 }
 
 .preview-title-right {
@@ -87,7 +87,23 @@ header {
    height: auto;
 }
 
+.preview:after {
+  content: "";
+  display: block;
+  position: absolute; /* could also be absolute */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(214,196,129,0.7));
+}
 
+.preview p {
+   position: absolute;
+   bottom: 0;
+   margin: 0;
+}
 
 /* ************************* MEDIA-QUERIES ************************* */
 
@@ -182,13 +198,11 @@ header {
       width: 250px;
    }
 
-   .row {
-      height: 280px;
-   }
-
    .preview img {
       height: 100%;
    }
+
+
 
 }
 
@@ -216,6 +230,36 @@ header {
       width: 400px;
    }
 
+   .preview::after {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: 10;
+     /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
+     background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(214,196,129,0.5), #FFF 99%);
+   }
+
+   .side-box {
+      background-color: rgba(214,196,129,1);
+   }
+
+   .side-box::after {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: 10;
+     /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
+     background: linear-gradient(to left, rgba(0,0,0,0.3), rgba(255,255,255,0.5) 80%, #FFF);
+   }
+
 
 }
 
@@ -225,5 +269,11 @@ header {
    .header-grid-container {
       max-width: 1140px;
    }
+
+   .row {
+      height: 300px;
+   }
+
+
 
 }
