@@ -105,6 +105,10 @@ header {
    margin: 0;
 }
 
+/* ************************* GENERAL ************************* */
+
+
+
 /* ************************* MEDIA-QUERIES ************************* */
 
 
@@ -230,7 +234,7 @@ header {
       width: 400px;
    }
 
-   .preview::after {
+   .preview.bg-toright::after {
      content: "";
      display: block;
      position: absolute;
@@ -240,14 +244,10 @@ header {
      width: 100%;
      z-index: 10;
      /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(214,196,129,0.5), #FFF 99%);
+     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(214,196,129,0.5) 80%, #FFF 98%);
    }
 
-   .side-box {
-      background-color: rgba(214,196,129,1);
-   }
-
-   .side-box::after {
+   .preview.bg-toleft::after {
      content: "";
      display: block;
      position: absolute;
@@ -257,7 +257,20 @@ header {
      width: 100%;
      z-index: 10;
      /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(to left, rgba(0,0,0,0.3), rgba(255,255,255,0.5) 80%, #FFF);
+     background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(214,196,129,0.5) 80%, #FFF 98%);
+   }
+
+   #rooms .side-box.bord-lft {
+      border-left: 6px solid #D6C481;
+   }
+
+   #restaurant .side-box.bord-rgt {
+      border-right: 6px solid #D6C481;
+   }
+
+
+   .side-box .row {
+      height: 100%;
    }
 
 
