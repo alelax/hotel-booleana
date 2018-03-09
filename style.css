@@ -65,26 +65,29 @@ header {
 
 /* ************************* ROOM PREVIEW ************************* */
 
+
+
 .preview {
    position: relative;
 }
 
 .preview h2 {
    position: absolute;
-   top: 5px;
+   top: 1%;
 }
 
 .preview-title-left {
-   left: 3%;
+   left: 1%;
 }
 
 .preview-title-right {
-   right: 25px;
+   right: 1%;
 }
 
 .preview img {
    width: 100%;
-   height: auto;
+   height: 100%;
+
 }
 
 .preview:after {
@@ -96,7 +99,7 @@ header {
   height: 100%;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(214,196,129,0.7));
+  background-color: rgba(0,0,0,0.3);
 }
 
 .preview p {
@@ -105,9 +108,28 @@ header {
    margin: 0;
 }
 
+.row {
+   height: 200px;
+}
+
 /* ************************* GENERAL ************************* */
 
+.btn {
+   background-color: rgba(255,255,255,0);
+   border-radius: 0%;
+   border: 3px solid #000;
+   font-size: 1.5em;
+}
 
+.btn-blue {
+   border-color: #4AA6B5;
+   color: #4AA6B5;
+}
+
+.btn-gold {
+   border-color: #D6C481;
+   color: #D6C481;
+}
 
 /* ************************* MEDIA-QUERIES ************************* */
 
@@ -217,6 +239,9 @@ header {
       max-width: 720px;
    }
 
+   .row {
+      height: 300px;
+   }
 
 }
 /* // Large devices (desktops, 992px and up) */
@@ -244,7 +269,7 @@ header {
      width: 100%;
      z-index: 10;
      /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(214,196,129,0.5) 80%, #FFF 98%);
+     background: linear-gradient(to right, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, #FFF 98%);
    }
 
    .preview.bg-toleft::after {
@@ -257,21 +282,22 @@ header {
      width: 100%;
      z-index: 10;
      /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(214,196,129,0.5) 80%, #FFF 98%);
+     background: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, #FFF 98%);
    }
 
    .side-box.bord-lft {
-      border-left: 4px solid #D6C481;
+      border-left: 3px solid #D6C481;
    }
 
    #restaurant .side-box.bord-rgt {
-      border-right: 4px solid #D6C481;
+      border-right: 3px solid #D6C481;
    }
-
 
    .side-box .row {
       height: 100%;
    }
+
+
 
 
 }
@@ -283,9 +309,10 @@ header {
       max-width: 1140px;
    }
 
-   .row {
-      height: 300px;
+   #hotel .row{
+      height: 600px;
    }
+
 
 
 
