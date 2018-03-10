@@ -112,6 +112,10 @@ header {
    height: 200px;
 }
 
+#banner .row {
+   height: 50px;
+}
+
 /* ************************* GENERAL ************************* */
 
 .btn {
@@ -143,7 +147,7 @@ header {
       grid-template-rows: 20% 20% 20% 20% 20%;
    }
 
-   header .header-grid-container div {
+   header .header-grid-container div:not(.flag-container) {
       display: block;
    }
 
@@ -182,6 +186,8 @@ header {
       justify-self: right;
    }
 
+
+
    .central-item {
       grid-column-start: 2;
       grid-column-end: 3;
@@ -213,9 +219,17 @@ header {
       justify-self: left;
    }
 
-   .bottom-item {
-      grid-column-start: 1;
+   .right-bottom-corner {
+      grid-column-start: 3;
       grid-column-end: 4;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      justify-self: left;
+   }
+
+   .bottom-item {
+      grid-column-start: 2;
+      grid-column-end: 3;
       grid-row-start: 5;
       grid-row-end: 6;
    }
@@ -228,7 +242,79 @@ header {
       height: 100%;
    }
 
+   /* *** flag language grid *** */
 
+   .flag-container {
+      display: none;
+      position: absolute;
+      justify-content: space-around;
+      align-content: space-between;
+      justify-items: center;
+      align-items: center;
+      top: -100%;
+      left: 105%;
+      width: 90px;
+      background-color: rgba(129,203,200,0.3);
+      /* border: 2px solid rgba(129,203,200,0.2);
+      border-radius: 5px; */
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+   }
+
+   #flags:hover .flag-container {
+      display: grid;
+      /* position: absolute;
+      left: 100%; */
+   }
+
+   .flag-container img {
+      width: 30px;
+      padding: 0 5px ;
+   }
+
+   .flag-container img:hover {
+      width: 40px;
+      padding: 0 5px;
+      z-index: 2;
+
+   }
+   .flag-lt {
+      grid-column: 1 2;
+      grid-row: 1 2;
+   }
+
+   .flag-lc {
+      grid-column: 1 2;
+      grid-row: 2 3;
+   }
+
+   .flag-lb {
+      grid-column: 1 2;
+      grid-row: 3 4;
+   }
+
+   .flag-ct {
+      grid-column: 2 3;
+      grid-row: 1 2;
+   }
+
+   .flag-cc {
+      grid-column: 2 3;
+      grid-row: 2 3;
+   }
+
+   .flag-cb {
+      grid-column: 2 3;
+      grid-row: 3 4;
+   }
+
+   #flags {
+      position: relative;
+   }
+
+   #current-language {
+      width: 30px;
+   }
 
 }
 
@@ -286,10 +372,10 @@ header {
    }
 
    .side-box.bord-lft {
-      border-left: 3px solid #D6C481;
+      border-left: 3px solid #4AA6B5;
    }
 
-   #restaurant .side-box.bord-rgt {
+   .side-box.bord-rgt {
       border-right: 3px solid #D6C481;
    }
 
