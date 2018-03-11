@@ -5,11 +5,40 @@ body, header, header * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   background: #ECFAFB;
+   font-family: 'Crimson Text', serif;
 }
 
 header {
    width: 100%;
    padding: 15px;
+}
+
+header h2 {
+   font-family: 'Cinzel', serif;
+   font-size: 28px;
+   font-weight: bold;
+   padding: 0 10px;
+   color: rgb(100, 102, 133);
+   display: inline-block;
+}
+
+header a {
+   font-family: 'Crimson Text', serif;
+   font-size: 25px;
+   padding: 0 10px;
+   color: rgb(100, 102, 133);
+   background-color: rgba(0, 0, 0,0);
+}
+
+.width-fixed {
+   width: 150px;
+}
+
+a:hover {
+  /* color: #0056b3; */
+  text-decoration: none;
+  color: rgb(101, 96, 97);
 }
 
 .header-grid-container {
@@ -19,14 +48,9 @@ header {
    grid-template-rows: 80% 10% 10%;
 }
 
-.xs-hidden {
-   display: none;
-}
-
 .header-grid-item {
    justify-self: center;
    align-self: center;
-
 }
 
 .central-item {
@@ -62,10 +86,30 @@ header {
    width: 180px;
 }
 
+.column-left div {
+   text-align: right;
+   border-right: 1px solid blue;
+}
 
-/* ************************* ROOM PREVIEW ************************* */
+.column-right div {
+   text-align: left;
+   border-left: 1px solid blue;
+}
 
+.column-left div:hover, .column-right div:hover   {
+   background-color: rgba(214, 196, 129, 0.2); /*rgba(129, 203, 200, 0.3);*/
+   border-left: 1px solid blue;
+   border-right: 1px solid blue;
 
+}
+
+.develop-by {
+   margin-top: 20px;
+   border-top: 1px solid #D6C481;
+   padding: 20px;
+}
+
+/* ************************* SECTION PREVIEW ************************* */
 
 .preview {
    position: relative;
@@ -73,7 +117,50 @@ header {
 
 .preview h2 {
    position: absolute;
+   font-size: 28px;
+   z-index: 10;
+   color: rgb(191, 186, 189);
    top: 1%;
+}
+/* color: rgb(220, 224, 220); */
+#hotel .preview h2 {
+   color: rgb(191, 186, 189);
+   font-size: 37px;
+   left: 50%;
+   top: 10%;
+   transform: translateX(-50%);
+}
+
+#hotel .preview p {
+   font-size: 15px;
+   line-height: 15px;
+   padding: 5% 20%;
+   text-align: justify;
+   color: rgb(191, 186, 189);
+   z-index: 10;
+}
+
+.preview p.description {
+   font-size: 17px;
+   line-height: 20px;
+   padding: 3% 5%;
+   text-align: justify;
+   color: rgb(191, 186, 189);
+   z-index: 10;
+}
+
+/* .side-box p.description {
+   font-size: 18px;
+   line-height: 19px;
+   color: rgb(191, 186, 189);
+   z-index: 10;
+} */
+
+
+
+.first-letter {
+   font-size: 47px;
+   /* font-weight: bold; */
 }
 
 .preview-title-left {
@@ -87,7 +174,6 @@ header {
 .preview img {
    width: 100%;
    height: 100%;
-
 }
 
 .preview:after {
@@ -98,8 +184,8 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.3);
+  z-index: 5;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .preview p {
@@ -107,16 +193,6 @@ header {
    bottom: 0;
    margin: 0;
 }
-
-.row {
-   height: 200px;
-}
-
-#banner .row {
-   height: 50px;
-}
-
-/* ************************* GENERAL ************************* */
 
 .btn {
    background-color: rgba(255,255,255,0);
@@ -135,21 +211,70 @@ header {
    color: #D6C481;
 }
 
+.row {
+   height: 200px;
+}
+
+#banner .row {
+   height: 50px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 5px 3px;
+  font-size: 15px;
+  margin-bottom: -1px;
+  background-color: #ECFAFB;
+  border: none;
+}
+
+footer .row {
+
+}
+.separator:first-child  {
+   border-right: 2px solid #D6C481;
+}
+
+
+
+/* ***************************************************************** */
 /* ************************* MEDIA-QUERIES ************************* */
+/* ***************************************************************** */
 
-
+/* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) {
 
    .header-grid-container {
       max-width: 540px;
       margin: 0 auto;
-      grid-template-columns: 20% 60% 20%;
+      grid-template-columns: 25% 50% 25%;
       grid-template-rows: 20% 20% 20% 20% 20%;
    }
 
    header .header-grid-container div:not(.flag-container) {
       display: block;
    }
+
+   header h2 {
+      font-size: 30px;
+      padding: 0 10px;
+      display: inline-block;
+   }
+
+   header a {
+      font-family: 'Crimson Text', serif;
+      font-size: 24px;
+      padding: 0 10px;
+   }
+
+   #hotel .preview p {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 3% 20%;
+      text-align: center;
+   }
+
 
    #hamburger-menu {
       display: none;
@@ -185,8 +310,6 @@ header {
       grid-row-end: 5;
       justify-self: right;
    }
-
-
 
    .central-item {
       grid-column-start: 2;
@@ -243,7 +366,6 @@ header {
    }
 
    /* *** flag language grid *** */
-
    .flag-container {
       display: none;
       position: absolute;
@@ -254,30 +376,26 @@ header {
       top: -100%;
       left: 105%;
       width: 90px;
-      background-color: rgba(129,203,200,0.3);
-      /* border: 2px solid rgba(129,203,200,0.2);
-      border-radius: 5px; */
       grid-template-columns: 33% 33% 33%;
       grid-template-rows: 33% 33% 33%;
    }
 
    #flags:hover .flag-container {
       display: grid;
-      /* position: absolute;
-      left: 100%; */
    }
 
+   /* *** flag grid *** */
    .flag-container img {
       width: 30px;
-      padding: 0 5px ;
+      padding: 0 5px;
    }
 
    .flag-container img:hover {
       width: 40px;
       padding: 0 5px;
       z-index: 2;
-
    }
+
    .flag-lt {
       grid-column: 1 2;
       grid-row: 1 2;
@@ -316,9 +434,44 @@ header {
       width: 30px;
    }
 
+   #banner .row {
+      height: 120px;
+   }
+
+   footer {
+      height: 250px;
+   }
+
+   footer .row {
+      height: 200px;
+   }
+
+   footer img {
+      width: 200px;
+   }
+
+   .maps {
+     position: relative;
+     overflow: hidden;
+     padding: 5px;
+     width: 100% !important;
+     height: 100% !important;
+   }
+
+   .maps > iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100% !important;
+     height: 100% !important;
+   }
+
+
+
+
 }
 
-/* // Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
    .header-grid-container {
@@ -329,12 +482,38 @@ header {
       height: 300px;
    }
 
+   header a {
+      font-family: 'Crimson Text', serif;
+      font-size: 28px;
+      padding: 0 10px;
+   }
+
+   #hotel .preview p {
+      font-size: 22px;
+      line-height: 28px;
+      padding: 5% 20%;
+   }
+
+   .preview h2 {
+      font-size: 33px;
+      z-index: 10;
+      color: rgb(220, 224, 220);
+      top: 1%;
+   }
+   /* color: rgb(220, 224, 220); */
+
 }
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
    header {
       padding: 30px;
+   }
+
+   header a {
+      font-family: 'Crimson Text', serif;
+      font-size: 30px;
+      padding: 0 10px;
    }
 
    .header-grid-container {
@@ -353,9 +532,8 @@ header {
      left: 0;
      height: 100%;
      width: 100%;
-     z-index: 10;
-     /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(to right, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, #FFF 98%);
+     z-index: 5;
+     background: linear-gradient(to right, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, rgba(236,250,251,0.5) 90%);
    }
 
    .preview.bg-toleft::after {
@@ -366,9 +544,8 @@ header {
      left: 0;
      height: 100%;
      width: 100%;
-     z-index: 10;
-     /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
-     background: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, #FFF 98%);
+     z-index: 5;
+     background: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(214,196,129,0.4) 80%, rgba(236,250,251,0.5) 90%);
    }
 
    .side-box.bord-lft {
@@ -383,8 +560,23 @@ header {
       height: 100%;
    }
 
+   #hotel .preview h2 {
+      font-size: 55px;
+   }
 
 
+
+   #hotel .preview p {
+      text-align: center;
+      font-size: 22px;
+      line-height: 28px;
+      padding: 5% 20%;
+   }
+
+
+   .first-letter {
+      font-size: 65px;
+   }
 
 }
 
@@ -399,7 +591,15 @@ header {
       height: 600px;
    }
 
+   #hotel .preview p {
+      text-align: center;
+      font-size: 32px;
+      line-height: 45px;
+      padding: 15% 20%;
+   }
 
-
+   .preview h2 {
+      font-size: 35px;
+   }
 
 }
