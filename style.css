@@ -236,8 +236,9 @@ a:hover {
 .page-title h2 {
    font-size: 30px;
    margin: 0 auto;
+   padding: 5px 10px;
    text-align: center;
-   width: 120px;
+   /* width: 120px; */
    display: inline-block;
    border: 1px solid #D6C481;
 }
@@ -498,6 +499,8 @@ a:hover {
 
    footer .row {
       height: 200px;
+      padding-top: 30px;
+      border-top: 1px solid #D6C481;
    }
 
    footer img {
@@ -611,6 +614,12 @@ a:hover {
       border-top: none;
    }
 
+   form {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+   }
+
 }
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -691,7 +700,7 @@ a:hover {
       margin: 0;
       padding: 0;
       text-align: center;
-      width: 130px;
+      /* width: 130px; */
       display: inline-block;
       border: none;
 

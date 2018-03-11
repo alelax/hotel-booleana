@@ -37,7 +37,7 @@
 
 
             <div class="header-grid-item central-item">
-               <a href="#"><img id="logo" src="images/booleanahotel-logo-nobg.png" alt=""></a>
+               <a href="index.html"><img id="logo" src="images/booleanahotel-logo-nobg.png" alt=""></a>
             </div>
 
 
@@ -100,7 +100,7 @@
             <div class="rooms-grid-items main-desc align-self-lg-stretch mt-2 mb-2">
                <h3 class="align-self-start">Double Standard</h3>
                <p>A cosy room with Jacuzzi, terrace or balcony, and Mediterranean Sea and nature views – enjoy a relaxing experience.</p>
-               <button class="btn btn-blue" type="button" name="button">Reserve it</button>
+               <button class="btn btn-gold" type="button" name="button">Reserve it</button>
 
             </div>
             <div class="rooms-grid-items secondary-desc align-self-center mt-2">
@@ -130,7 +130,7 @@
             <div class="rooms-grid-items main-desc align-self-lg-stretch mt-2 mb-2">
                <h3 class="align-self-start">Eden Room</h3>
                <p>Enjoy a unique and exclusive experience in the Eden room with its private Mini-pool in its personal garden terrace, a Jacuzzi, a large double bed, and relaxing ambience.</p>
-               <button class="btn btn-blue" type="button" name="button">Reserve it</button>
+               <button class="btn btn-gold" type="button" name="button">Reserve it</button>
 
             </div>
             <div class="rooms-grid-items secondary-desc align-self-center mt-2">
@@ -162,7 +162,7 @@
             <div class="rooms-grid-items main-desc align-self-lg-stretch mt-2 mb-2">
                <h3 class="align-self-start">Suite Junior Edén</h3>
                <p>Besides having your own Jacuzzi, hammam and terrace with sunbeds, this very spacious suite proposes beautiful Mediterranean views from your own private mini-pool</p>
-               <button class="btn btn-blue" type="button" name="button">Reserve it</button>
+               <button class="btn btn-gold" type="button" name="button">Reserve it</button>
             </div>
 
             <div class="rooms-grid-items secondary-desc align-self-center mt-2">
@@ -195,7 +195,7 @@
             <div class="rooms-grid-items main-desc align-self-lg-stretch mt-2 mb-2">
                <h3 class="align-self-start">Na Xamena Suite</h3>
                <p>The Na Xamena is our largest, most luxurious and privacy oriented Suite. It includes two bedrooms and two bathrooms, a Jacuzzi and hammam; and has its own personal terrace with sunbeds and mini-pool.</p>
-               <button class="btn btn-blue" type="button" name="button">Reserve it</button>
+               <button class="btn btn-gold" type="button" name="button">Reserve it</button>
             </div>
 
             <div class="rooms-grid-items secondary-desc align-self-center mt-2">
@@ -218,8 +218,146 @@
 
          </div>
 
-      
+      <section id="reservation-form" class="container mt-3">
+         <div class="container">
+            <div class="row page-title align-items-center">
+               <h2><span class="first-letter">R</span>eserve your room</h2>
+            </div>
+         </div>
+
+         <form>
+            <div class="form-row">
+
+               <div class="form-group col-md-6">
+                 <input type="text" class="form-control" placeholder="Surname">
+               </div>
+
+               <div class="form-group col-md-6">
+                 <input type="text" class="form-control" placeholder="Name">
+               </div>
+
+
+            </div>
+
+            <div class="form-row">
+               <div class="form-group col-md-6">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Insert your mail">
+               </div>
+               <div class="form-group col-md-6">
+                  <input type="tel" class="form-control" placeholder="Insert your telephone number">
+               </div>
+            </div>
+
+            <div class="form-row">
+               <div class="form-group col-md-3">
+                  <select id="inputState" class="form-control">
+                     <option selected>Choose service...</option>
+                     <option>Full board</option>
+                     <option>Half board</option>
+                  </select>
+               </div>
+
+               <div class="form-group col-md-3">
+                  <select id="inputState" class="form-control">
+                     <option selected>Choose room...</option>
+                     <option>Double standard</option>
+                     <option>Eden room</option>
+                     <option>Suite Junior Edén</option>
+                     <option>Na Xamena Suite</option>
+                  </select>
+                  </select>
+               </div>
+
+               <div class="form-group col-md-3">
+                 <select id="inputState" class="form-control">
+                    <option selected>Adults number...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                 </select>
+               </div>
+
+               <div class="form-group col-md-3">
+                  <select id="inputState" class="form-control">
+                     <option selected>Children number...</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                  </select>
+               </div>
+
+           </div>
+
+            <div class="form-row">
+
+               <div class="form-row col-md-6">
+                  <div class="col-md-12">
+                     <textarea class="form-control" rows="6"></textarea>
+                  </div>
+               </div>
+
+               <div class="form-row col-md-6">
+
+                  <div class="form-group col-md-6">
+                     <label for="">Your arrival:</label>
+                     <input type="date" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="">Your departure:</label>
+                     <input type="date" class="form-control">
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-gold col-md-12">Send request</button>
+
+               </div>
+
+
+
+            </div>
+
+
+
+
+
+         </form>
+      </section>
 
       </main>
+
+      <footer class="container px-0 ">
+
+         <div class="row no-gutters justify-content-between justify-items-center">
+
+            <div class="col-md-3 justify-content-center d-none d-md-block">
+               <img src="images/booleanahotel-logo-nobg.png" alt="">
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-2 pl-2 pr-2 separator">
+               <ul class="list-group">
+                 <li class="list-group-item">Home</li>
+                 <li class="list-group-item">Gallery</li>
+                 <li class="list-group-item">Rooms</li>
+                 <li class="list-group-item">Restaurant</li>
+                 <li class="list-group-item">Spa</li>
+               </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 separator">
+               <ul class="list-group">
+                 <li class="list-group-item">email: booleanahotel@bool.com</li>
+                 <li class="list-group-item">telephone: 03-252125</li>
+                 <li class="list-group-item">fax: 03-545212</li>
+                 <li class="list-group-item">address: coast beach, 13th, San josè, California </li>
+               </ul>
+            </div>
+            <div class="col-12 col-md-4 maps separator">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464445.41751996486!2d-15.67795374916815!3d27.92700174970299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40a1d0d6663d15%3A0x17b036fa497df184!2sLas+Salinas+House!5e0!3m2!1sit!2sit!4v1520693098631" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 text-center develop-by">
+               Developed by - Alessandro Lausdei
+            </div>
+         </div>
+
+      </footer>
    </body>
 </html>
