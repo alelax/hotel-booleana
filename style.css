@@ -5,7 +5,6 @@ body, header, header * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-
    font-family: 'Crimson Text', serif;
 }
 
@@ -113,6 +112,10 @@ a:hover {
    padding: 20px;
 }
 
+.c-blu {
+   color: #4AA6B5;
+}
+
 /* ************************* SECTION PREVIEW ************************* */
 
 .preview {
@@ -207,11 +210,11 @@ a:hover {
    color: #D6C481;
 }
 
-.row {
+#index .row {
    height: 200px;
 }
 
-#banner .row {
+#index #banner .row {
    height: 50px;
 }
 
@@ -291,6 +294,30 @@ a:hover {
    border-top: 1px solid #D6C481;
    margin-top: 25px;
 }
+
+/* ***************************************************************** */
+/* *************************** GALLERY PAGE ************************** */
+
+
+.gallery-grid-container {
+   display: grid;
+   margin: 0 auto;
+   max-width: 100%;
+   grid-template-columns: 100%;
+   grid-template-rows: 15% 85%;
+}
+
+.gallery-of h3 {
+   font-size: 23px;
+   text-align: center;
+}
+
+.gallery-images {
+   height: 180px;
+   padding-right: 10px;
+   margin: 5px auto;
+}
+
 
 
 /* ***************************************************************** */
@@ -523,16 +550,20 @@ a:hover {
      height: 100% !important;
    }
 
+
+
+
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-   .header-grid-container, .rooms-grid-container {
+   .header-grid-container, .rooms-grid-container, .gallery-grid-container {
       max-width: 720px;
    }
 
-   .row {
+   #index .row {
       height: 300px;
    }
 
@@ -620,6 +651,29 @@ a:hover {
       margin-bottom: 50px;
    }
 
+   .gallery-of h3 {
+      font-size: 26px;
+   }
+
+   .gallery-images {
+      height: 180px;
+      padding-right: 10px;
+      margin: 5px;
+   }
+
+   /* .gallery-images:hover {
+      height: 350px;
+   } */
+
+   .thumbnail:hover {
+    position:relative;
+    top: -25px;
+    left:-20px;
+    height: 250px;
+    /*display:block; */
+    z-index:999;
+}
+
 }
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -634,7 +688,7 @@ a:hover {
       padding: 0 10px;
    }
 
-   .header-grid-container, .rooms-grid-container {
+   .header-grid-container, .rooms-grid-container, .gallery-grid-container {
       max-width: 960px;
    }
 
@@ -674,7 +728,7 @@ a:hover {
       border-right: 3px solid #D6C481;
    }
 
-   .side-box .row {
+   #index .side-box .row {
       height: 100%;
    }
 
@@ -694,6 +748,8 @@ a:hover {
    .first-letter {
       font-size: 65px;
    }
+
+
 
    .page-title h2 {
       font-size: 30px;
@@ -716,11 +772,11 @@ a:hover {
  /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-   .header-grid-container, .rooms-grid-container {
+   .header-grid-container, .rooms-grid-container, .gallery-grid-container {
       max-width: 1140px;
    }
 
-   #hotel .row{
+   #index #hotel .row{
       height: 600px;
    }
 
