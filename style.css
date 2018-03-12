@@ -215,7 +215,8 @@ a:hover {
 }
 
 #index #banner .row {
-   height: 50px;
+  width: 728px;
+   height: 90px;
 }
 
 .list-group-item {
